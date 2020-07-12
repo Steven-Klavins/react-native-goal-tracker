@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar'
 import React, { useState } from 'react'
 import GoalItem from './Components/GoalItem'
+import GoalInput from './Components/GoalInput'
 import {
   StyleSheet,
   Text,
@@ -12,30 +13,17 @@ import {
 } from 'react-native'
 
 export default function App() {
-  const [enteredGoal, setEnteredGoal] = useState('')
   const [goals, setGoals] = useState([])
 
-  const inputHandler = (enteredText) => {
-    setEnteredGoal(enteredText)
-  }
-
-  const goalHandler = () => {
+  const goalHandler = (goalTitle) => {
     setGoals((currentGoals) => [
       ...currentGoals,
-      { key: Math.random().toString(), value: enteredGoal },
+      { key: Math.random().toString(), value: goalTitle },
     ])
   }
   return (
     <View style={styles.screen}>
-      <View style={styles.input}>
-        <TextInput
-          placeholder="Goal"
-          style={styles.inputContainer}
-          onChangeText={inputHandler}
-          value={enteredGoal}
-        />
-        <Button title="ADD" onPress={goalHandler} />
-      </View>
+      <GoalInput onAddGoal={goalHandler} />
 
       <FlatList
         keyExtractor={(item, index) => item.id}
@@ -49,17 +37,5 @@ export default function App() {
 const styles = StyleSheet.create({
   screen: {
     padding: 50,
-  },
-
-  inputContainer: {
-    width: '80%',
-    borderBottomColor: 'black',
-    borderBottomWidth: 1,
-  },
-
-  input: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
   },
 })
