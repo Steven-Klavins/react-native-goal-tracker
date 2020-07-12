@@ -4,13 +4,19 @@ import {
   Text,
   StyleSheet,
   ProgressBarAndroidComponent,
+  TouchableOpacity,
 } from 'react-native'
 
 const GoalItem = (props) => {
   return (
-    <View style={styles.goalItem}>
-      <Text>{props.title}</Text>
-    </View>
+    <TouchableOpacity
+      activeOpacity={0.8}
+      onPress={props.onDelete.bind(this, props.id)}
+    >
+      <View style={styles.goalItem}>
+        <Text>{props.title}</Text>
+      </View>
+    </TouchableOpacity>
   )
 }
 
