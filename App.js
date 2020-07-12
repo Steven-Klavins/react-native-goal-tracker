@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar'
 import React, { useState } from 'react'
+import GoalItem from './Components/GoalItem'
 import {
   StyleSheet,
   Text,
@@ -39,11 +40,7 @@ export default function App() {
       <FlatList
         keyExtractor={(item, index) => item.id}
         data={goals}
-        renderItem={(itemData) => (
-          <View style={styles.goalItem}>
-            <Text>{itemData.item.value}</Text>
-          </View>
-        )}
+        renderItem={(itemData) => <GoalItem title={itemData.item.value} />}
       />
     </View>
   )
@@ -64,11 +61,5 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-  },
-
-  goalItem: {
-    padding: 10,
-    backgroundColor: '#ccc',
-    marginVertical: 10,
   },
 })
