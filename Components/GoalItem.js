@@ -1,11 +1,5 @@
 import React, { useState } from 'react'
-import {
-  View,
-  Text,
-  StyleSheet,
-  ProgressBarAndroidComponent,
-  TouchableOpacity,
-} from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 
 const GoalItem = (props) => {
   return (
@@ -25,6 +19,9 @@ const styles = StyleSheet.create({
     padding: 10,
     backgroundColor: '#ccc',
     marginVertical: 10,
+    borderRadius: 20,
+    marginLeft: 10,
+    marginRight: 10,
   },
 })
 export default GoalItem
