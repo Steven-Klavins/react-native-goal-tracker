@@ -9,6 +9,16 @@ Add your goal to the list and tap it away once your done, it's simple as that! I
   </p>
   
 
+## How To Run The App
+By far the easiest way to try out this app is by installing the Expo app and scanning the QR code provided.
+
+[IOS](https://itunes.apple.com/app/apple-store/id982107779)
+
+[Android](https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=www)
+
+
+[Find the app on expo](https://expo.io/@steven-klavins/react-native-goal-tracker)
+
   
   
   
