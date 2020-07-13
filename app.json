@@ -21,6 +21,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "A simple goal tracking app ",
+    "githubUrl": "https://github.com/Steven-Klavins"
   }
 }
