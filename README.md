@@ -18,8 +18,9 @@ By far the easiest way to try out this app is by installing the Expo app and sca
 
 [Android](https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=www)
 
-
 [Find the app on expo](https://expo.io/@steven-klavins/react-native-goal-tracker)
+
+I can export an APK if requested... 
 
   
   
